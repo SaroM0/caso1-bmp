@@ -38,8 +38,13 @@ typedef struct {
 #pragma pack(pop)
 
 
+// Prototype to avoid implicit declaration when compiling with USE_ASM
+void convertir_a_grises(PALETARGB* paleta, int num_colores);
+
 // Funcion para convertir la paleta a escala de grises
+#ifndef USE_ASM
 void convertir_a_grises(PALETARGB* paleta, int num_colores) {
+    
     int i;   
     int gris;
 
@@ -49,9 +54,8 @@ void convertir_a_grises(PALETARGB* paleta, int num_colores) {
         paleta[i].rgbGreen = gris;
         paleta[i].rgbBlue = gris;
     }
-
 }
-
+#endif
 
 
 //Modo de uso: bitmap <archivobmp>
