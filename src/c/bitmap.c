@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+// Laura Sofia Vallejo Bermudez - 202312975
+// Santiago Rodríguez Mora – 202110332 
 
 // Estructuras para encabezados de BMP
 #pragma pack(push, 1)
